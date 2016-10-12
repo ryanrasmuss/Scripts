@@ -8,7 +8,7 @@
 # USAGE: ./download_csif.sh -r [pc#] [pathToDirectoryOnCSIF] [localDestination]
 # When selecting destination use . for home directory (if you wish)
 
-user_name='rlrasmus'
+user_name=''
 
 if [ "$1" == '-h' ]; then
 	echo "Usage: ./download_csif.sh [pc#] [pathToFile] [pathOnHost]"

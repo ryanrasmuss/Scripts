@@ -4,7 +4,7 @@
 # Just add your UC Davis login to user_name
 # Usage: ./csif.sh [pc#]
 
-user_name='rlrasmus'
+user_name='jsmith'
 
 if [ $1 == '-h' ]; then
 	echo "Usage: ./csif [pc#]"

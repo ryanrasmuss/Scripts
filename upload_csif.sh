@@ -8,7 +8,7 @@
 # USAGE: ./upload_csif.sh -r [directoryToUpload] [pc#] [destination]
 # When selecting destination use . for home directory (if you wish)
 
-user_name='rlrasmus'
+user_name=''
 
 if [ $1 == '-h' ]; then	
 	echo "Usage: ./upload_csif.sh file pc# where(.)"
