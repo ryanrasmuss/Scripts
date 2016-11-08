@@ -1,6 +1,4 @@
 #!/bin/bash
-# put a -h
-# put arguments to allow 2-pane view and 3-pane view
 if [ $1 == '-h' ]; then
 	echo "Usage: ./grid.sh file0 file1 file3 file4"
 elif [ $# == 1 ]; then
