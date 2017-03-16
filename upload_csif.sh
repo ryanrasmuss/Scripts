@@ -10,7 +10,7 @@
 
 user_name=''
 
-if [ $1 == '-h' ]; then	
+if [ $# -lt 3 ] || [ $# -gt 4 ]; then	
 	echo "Usage: ./upload_csif.sh file pc# where(.)"
 	echo "or ./upload_csif.sh -r directory pc# where(.)"
 elif [ $1 == '-r' ]; then

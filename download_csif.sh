@@ -10,7 +10,7 @@
 
 user_name=''
 
-if [ "$1" == '-h' ]; then
+if [ $# -lt 3 ] || [ $# -gt 4 ]; then
 	echo "Usage: ./download_csif.sh [pc#] [pathToFile] [pathOnHost]"
 	echo "or ./download_csif.sh -r [pc#] [pathToDirectory] [pathOnHost]"
 elif [ "$1" == '-r' ]; then

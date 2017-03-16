@@ -6,7 +6,7 @@
 
 user_name='jsmith'
 
-if [ $1 == '-h' ]; then
+if [ $# != 1 ] || [ $1 == '-h' ]; then
 	echo "Usage: ./csif [pc#]"
 else
 	ssh $user_name@pc$1.cs.ucdavis.edu
