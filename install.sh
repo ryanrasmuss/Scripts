@@ -6,6 +6,9 @@
 # 0 means no problem, 1 is problem 
 INSTALLED_DEPS=0
 
+# Text sugar [bold output]
+bold=$(tput bold)
+
 MAC_PACKAGES="fluid-synth
 gtk+3
 libsndfile
@@ -84,7 +87,8 @@ else
 fi
 
 if [[ $INSTALLED_DEPS == 0 ]]; then
-    git clone https://github.com/UCDClassNitta/ECS160Linux.git
+    echo "${bold}Dependencies successfully installed✓"
+
 else
     echo "Could not install dependencies.."
     echo "Remember to run as root!"
