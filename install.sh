@@ -29,7 +29,7 @@ portaudio19-dev
 git
 "
 
-echo "Installing thegame"
+echo "Installing thegame dependencies"
 echo "If Linux: run as root"
 echo "If MAC: DO NOT run as root"
 
