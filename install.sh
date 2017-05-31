@@ -30,16 +30,9 @@ libfluidsynth-dev
 portaudio19-dev
 git
 "
-
-<<<<<<< HEAD
-echo "Installing thegame dependencies"
-echo "If Linux: run as root"
-echo "If MAC: DO NOT run as root"
-=======
 echo "${bold}Installing thegame dependencies"
 echo "${bold}If Linux: run as root"
 echo "${bold}If MAC: DO NOT run as root"
->>>>>>> fddfe8090d7e64e8abb698604c3f53eff0f92a08
 
 if [[ "$OSTYPE" == "linux"* ]]; then
     # install linux deps
