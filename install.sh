@@ -3,6 +3,8 @@
 # Author: Ryan Rasmuss
 # For: ECS160 Winter 2017
 
+# OLD: DO NOT USE
+
 # 0 means no problem, 1 is problem 
 INSTALLED_DEPS=0
 
@@ -29,9 +31,15 @@ portaudio19-dev
 git
 "
 
+<<<<<<< HEAD
 echo "Installing thegame dependencies"
 echo "If Linux: run as root"
 echo "If MAC: DO NOT run as root"
+=======
+echo "${bold}Installing thegame dependencies"
+echo "${bold}If Linux: run as root"
+echo "${bold}If MAC: DO NOT run as root"
+>>>>>>> fddfe8090d7e64e8abb698604c3f53eff0f92a08
 
 if [[ "$OSTYPE" == "linux"* ]]; then
     # install linux deps
@@ -49,18 +57,21 @@ if [[ "$OSTYPE" == "linux"* ]]; then
                 break
             fi
         done
-    fi
-    if [[ "$FLAVOR" == "Ubuntu"* ]]; then
+    elif [[ "$FLAVOR" == "Ubuntu"* ]]; then
         echo "Installing $FLAVOR dependencies.. "
 
         for pkg in $UBUNTU_PACKAGES
         do
             apt-get install $pkg
             if [ $? == 1 ]; then
+                # failed to install
                 INSTALLED_DEPS=1
                 break
             fi
         done
+    else
+        echo "Unsupported $FLAVOR"
+        INSTALLED_DEPS=1
     fi
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     # install mac deps
@@ -82,7 +93,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     done
 
 else
-    echo "Can't detect operating system: $OSTYPE"
+    echo "Unsupported OS: $OSTYPE"
     INSTALLED_DEPS=1
 fi
 
