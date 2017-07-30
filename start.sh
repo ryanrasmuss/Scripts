@@ -1,7 +1,9 @@
 #!/bin/bash
+
 # purpose: quick monitor of APs around me
 # for: kali linux 
 # problems: different interface name and unreliable mon interface name
+
 echo "Dropping interface .."
 ifconfig wlan0 down
 echo "Changing mac address .."

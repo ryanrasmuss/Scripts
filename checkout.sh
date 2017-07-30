@@ -1,12 +1,10 @@
-#! For monitoring a particular AP
+#!/bin/bash
 
-if [ $1 == '-h' ]; then
-	echo "Usage: [bssid] [fileToWrite]"
-	echo "Assuming monitor inteface name: wlan0mon"
-fi
-if [ $# != 2 ]; then
-	echo "Usage: [bssid] [fileToWrite]"
+# For monitoring a particular AP
+
+if [ $1 == '-h' ] || [ $# != 3]; then
+	echo "Usage: [bssid] [channel#] [fileToWrite]"
 	echo "Assuming monitor inteface name: wlan0mon"
 else
-	airodump-ng --bssid $1 --write $2 wlan0mon
+	airodump-ng --bssid $1 --channel $2 --write $3 wlan0mon
 fi

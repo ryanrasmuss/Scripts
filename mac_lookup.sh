@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # grep -i "2c-f0-ee" /var/lib/ieee-data/oui.txt
 # $1 mac_address_to_lookup
 

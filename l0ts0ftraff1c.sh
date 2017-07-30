@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # aireplay-ng --deauth [how many packets to send] -a [AP MAC ADDRESS] -c [CLIENT MAC ADDRESS]
 # **AP is the router
 # **CLIENT is the device to kick off (station column)
