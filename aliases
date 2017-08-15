@@ -1,3 +1,14 @@
 alias please='sudo $(history | cut -c 8- | tail -2 | awk "FNR == 1 {print}")'
 alias physip="dig TXT +short o-o.myaddr.l.google.com @ns1.google.com"
 export PS1='\[\e[1;34m\]\u@\h \W ➔ \[\e[0m\]'
+
+# Related to scripts
+
+alias checkout='. ~/Scripts/checkout.sh'
+alais start='. ~/Scripts/start.sh'
+alias maclookup='. ~/Scripts/mac_lookup.sh'
+alias checksum='. ~/Scripts/verify_checksum.sh'
+alias pi='ssh pi@192.168.1.72 -p #'
+
+#  mac specific
+alias sublime='open -a /Applications/Sublime\ Text.app'

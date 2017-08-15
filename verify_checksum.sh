@@ -4,9 +4,9 @@
 
 if [ $# == 3 ]; 
 then
-    # $1 is the known sha1 value
+    # $1 is the known sum
     # $2 is the iso in question
-    # $3 is key type?
+    # $3 is type (sha256 md5 w.e works w/ dgst option)
     testing=`openssl dgst -$3 $2 | cut -d " " -f 2`
     echo "$1 to"
     echo "$testing"
