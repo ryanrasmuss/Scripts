@@ -52,8 +52,8 @@ def storeIPs(ip_addresses):
     check_these = [] # possible malicious ips
     block_these = [] # def malicious ips
 
-    check_file = open("check_these_ips", "w+")
-    block_file = open("block_these_ips", "w+")
+    check_file = open("check_these_ips.log", "w+")
+    block_file = open("block_these_ips.log", "w+")
 
     ips = []
 
@@ -96,7 +96,6 @@ def startParse(filename, knownIPs):
     print "parsedFile type: %s" % type(parsedFile)
     storeIPs(parsedFile)
     fileH.close()
-
 
 if __name__ == '__main__':
     print "Args given (expecting filename, and known ips): %s" % argv

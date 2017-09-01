@@ -17,7 +17,7 @@ then
 		echo "no match"
     fi
 else
-    echo " \$1 known sha1 value"
+    echo " \$1 known sum"
     echo " \$2 *.iso in question"
     echo " \$3 key type (md#/sha#/etc..)"
 fi
