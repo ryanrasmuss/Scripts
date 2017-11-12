@@ -11,5 +11,5 @@ apt-get install unzip -y
 unzip ovpn.zip
 echo "Shredding zip.. "
 shred -zu ovpn.zip
-openvpn ovpn_tcp/us998.nordvpn.com.tcp.ovpn
+echo "Connect @$dir: openvpn ovpn_tcp/us998.nordvpn.com.tcp.ovpn"
 # may want to ask if we want to connect to default
