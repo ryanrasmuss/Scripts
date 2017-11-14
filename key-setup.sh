@@ -15,3 +15,4 @@ shred -zu private_key
 shred -zu public_key
 
 echo "Done."
+echo "Example: git@github.com:username/project.git"
