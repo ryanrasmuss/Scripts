@@ -1,9 +1,27 @@
 #!/bin/bash
 
-output="$(``VBoxManage list runningvms | grep "Dev-Box-32"``)"
+VM="Dev-Box-32"
+PORT=11337
+IP=localhost
+LOGIN=user
+
+output="$(``VBoxManage list runningvms | grep $VM``)"
+
 if [[ -z $output ]]; then
-    VBoxManage startvm Dev-Box-32 --type=headless
-    ssh -l user -p 16001 localhost
+    VBoxManage startvm $VM --type=headless
+    ssh -l $LOGIN -p $PORT $IP
+elif [[ $# == 1 ]]; then
+
+    if [[ $1 == 'ssh' ]]; then
+        echo "ssh -l $LOGIN -p $PORT $IP"
+        ssh -l $LOGIN -p $PORT $IP
+    elif [[ $1 == 'off' ]]; then
+        echo "Shutting down Dev Box"
+        VBoxManage controlvm $VM poweroff
+    else
+        printf "\033[5;31mWtf? ssh or off\033[0m\n"
+    fi
+
 else
-    echo "Dev-Box-32 is already up"
+    echo "$VM is already up! Call ssh or off"
 fi
