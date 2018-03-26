@@ -1,7 +1,6 @@
 alias please='sudo $(history | cut -c 8- | tail -2 | awk "FNR == 1 {print}")'
 alias physip="dig TXT +short o-o.myaddr.l.google.com @ns1.google.com"
 alias aliases='cat ~/.bash_aliases'
-#alias aliases='cat ~/.bash_profile'
 export PS1='\[\e[1;34m\]\u@\h \W ➔ \[\e[0m\]'
 
 # Related to scripts
