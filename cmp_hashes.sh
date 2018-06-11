@@ -11,7 +11,7 @@ else
     file2_hash=`openssl dgst -$3 $2 | cut -d " " -f 2`
 
     echo -e "\033[32m$1\033[0m hash: \033[32m$file1_hash\033[0m"
-    echo -e "\033[34m$2\033 hash: \033[34m$file2_hash\033[0m"
+    echo -e "\033[34m$2\033[0m hash: \033[34m$file2_hash\033[0m"
 
     if [ $file1_hash == $file2_hash ]
     then
