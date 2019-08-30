@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # WILL CREATE (and remove) local_logs.tmp and remote_logs.tmp locally
-# CHANGE DIRECTORY PATH @ LINES 14 & 29
-# CHANGE VARIABLES BELOW @ LINES 7 & 9
+# CHANGE DIRECTORY PATH @ LINES 14 & 29 (Example: remote directory is "/home/logger/Logs/" - "Logs/" for short)
+# CHANGE VARIABLES BELOW @ LINES 7 & 8
 
 remote_user=logger
 remote_ip=169.254.1.1
