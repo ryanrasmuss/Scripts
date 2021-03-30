@@ -19,7 +19,7 @@ elif [[ $# == 1 ]]; then
         echo "Shutting down Dev Box"
         VBoxManage controlvm $VM poweroff
     else
-        printf "\033[5;31mWtf? ssh or off\033[0m\n"
+        printf "\033[5;31mWhat? ssh or off\033[0m\n"
     fi
 
 else
